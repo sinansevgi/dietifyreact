@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { BiPlusCircle } from 'react-icons/bi';
 import style from '../../assets/Meal.module.css';
 
-const Meal = ({ meals, fetchStatus }) => {
+const Meal = ({ meals }) => {
   const mealItems = Object.keys(meals);
   const lastRecord = mealItems[mealItems.length - 1];
   const mealArray = meals[lastRecord] || [];
@@ -32,7 +32,7 @@ const Meal = ({ meals, fetchStatus }) => {
         {lastRecord}
       </h2>
       <h3>Recorded Meals:</h3>
-      {fetchStatus && mealLinks}
+      {mealLinks}
       <div className={style.addButton}>
         <Link to="meals/addMeal" className={style.meal}>
           <BiPlusCircle />
@@ -45,7 +45,6 @@ const Meal = ({ meals, fetchStatus }) => {
 
 Meal.propTypes = {
   meals: PropTypes.instanceOf(Object).isRequired,
-  fetchStatus: PropTypes.bool.isRequired,
 };
 
 export default Meal;

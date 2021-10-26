@@ -38,11 +38,14 @@ const Dashboard = () => {
   }, [mealsList]);
 
   useEffect(() => {
+    if (isSuccess) {
+      dispatch(clearState());
+    }
     if (isError) {
       dispatch(clearState());
       history.push('/login');
     }
-  }, [isError]);
+  }, [isError, isSuccess]);
 
   return (
     <div>
@@ -65,7 +68,7 @@ const Dashboard = () => {
                   <Tracker meals={mealList} />
                 </Route>
                 <Route path="/meals">
-                  <Meal meals={mealList} fetchStatus={isSuccess} />
+                  <Meal meals={mealList} />
                 </Route>
                 <Route path="/">
                   <Stats graphData={graphData} />
