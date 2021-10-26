@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import toast, { Toaster } from 'react-hot-toast';
 import { useHistory } from 'react-router-dom';
-import { addMeal, mealSelector, clearState } from './MealSlice';
+import {
+  addMeal, mealSelector, clearState, getMealData,
+} from './MealSlice';
 import style from '../../assets/Meal.module.css';
 
 const AddMeal = () => {
@@ -24,6 +26,7 @@ const AddMeal = () => {
 
   const handleSubmit = () => {
     dispatch(addMeal({ token: localStorage.getItem('token'), title: mealName }));
+    dispatch(getMealData({ token: localStorage.getItem('token') }));
   };
   return (
     <div className={style.mealForm}>
