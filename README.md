@@ -1,7 +1,7 @@
 # Dietify Frontend
 Dietify - Calorie counting for weight management shouldn't be hard. 
 Dietify helps you to keep track of your calorie intake. 
-This is the frontend for the Dietify application.
+This is the frontend for the Dietify application. [Click here](https://github.com/sinansevgi/Dietify/tree/basic_rails_app) to see the backend project.
 ![Screenshot](screenshot.gif)
 
 ## Built With
