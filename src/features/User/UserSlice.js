@@ -111,7 +111,7 @@ export const userSlice = createSlice({
     [loginUser.rejected]: (state, { payload }) => {
       state.isFetching = false;
       state.isError = true;
-      state.errorMessage = payload;
+      state.errorMessage = payload.message;
     },
     [loginUser.pending]: (state) => {
       state.isFetching = true;
