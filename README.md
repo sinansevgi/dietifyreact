@@ -35,7 +35,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Live Demo Link
 
-You can use [this link](https:// /) to access the demo version of this app.
+You can use [this link](https://dietify-react.netlify.app/) to access the demo version of this app.
 
 ## Authors
 
