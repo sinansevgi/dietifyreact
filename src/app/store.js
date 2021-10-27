@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { userSlice } from '../features/User/UserSlice';
+import { mealSlice } from '../features/Meal/MealSlice';
+import { foodSlice } from '../features/Food/FoodSlice';
 
-export const store = configureStore({
+export default configureStore({
   reducer: {
-    counter: counterReducer,
+    user: userSlice.reducer,
+    meals: mealSlice.reducer,
+    foods: foodSlice.reducer,
   },
 });
